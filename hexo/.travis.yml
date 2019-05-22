@@ -10,7 +10,6 @@ cache:
 
 notifications:
   # 钉钉机器人消息推送部署结果
-  webhooks: false
 
   # 邮件发送部署结果通知
   email:
