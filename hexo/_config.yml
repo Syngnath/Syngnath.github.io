@@ -81,5 +81,5 @@ theme: hexo-theme-snippet
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:Syngnath/Syngnath.github.io.git
+  repo: https://GH_TOKEN@github.com/Syngnath/Syngnath.github.io.git
   branch: master
