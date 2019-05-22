@@ -29,7 +29,7 @@ before_script:
 
 script:
   - hexo clean && hexo g
-  - gulp
+  #- gulp
   
 after_script:
   - ./_travis.sh
