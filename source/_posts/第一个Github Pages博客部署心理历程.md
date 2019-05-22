@@ -1,12 +1,14 @@
 ---
 title: 第一个Github Pages博客部署心理历程
 categories:
-  - 随记
+  - 博客
 tags:
-  - 随记
+  - Travis Cl
+  - Hexo
+  - VsCode
 comments: false
-date: 2019-05-22 17:26:00
-img:'./Img/welcome.jpg'
+date: 2019-05-22 18:26:00
+img: './PostImg/welcome.jpg'
 ---
 
 # 简介
