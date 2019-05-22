@@ -13,7 +13,7 @@ notifications:
   webhooks:
     urls:
       - https://oapi.dingtalk.com/robot/send?access_token=a9381cf3356c9c8fd4b5a33157e934ce6a74f23e5e16fdee03b5f828a8d553e1
-    on_success: change 
+    on_success: always 
     on_failure: always   
     
   # 邮件发送部署结果通知
