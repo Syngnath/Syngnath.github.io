@@ -45,7 +45,7 @@ after_script:
 
 branches:
   only:
-    - dev
+    - hexo
 env:
  global:
    - GH_REF: git@github.com:Syngnath/Syngnath.github.io.git
