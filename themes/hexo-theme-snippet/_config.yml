@@ -95,7 +95,7 @@ links:
 # 主题自定义个性化配置
 
 ## 网站宣传语
-branding: '攀登者，勇闯代码之巅'
+branding: 'Syngnath 的技术沙龙'
 
 ## 设置banner背景图片
 banner:
@@ -137,8 +137,8 @@ declaration:
 
 ## 文章打赏
 reward:
-  alipay: ''
-  wepay: ''
+  alipay: '13226955115'
+  wepay: '13226955115'
   tip: 赞赏是不耍流氓的鼓励
 
 ## 主题评论
