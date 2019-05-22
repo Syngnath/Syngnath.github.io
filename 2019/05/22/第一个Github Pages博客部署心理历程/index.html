@@ -213,25 +213,27 @@
 
     <div id="comments">
         
-	<link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.4.1/gitalk.min.css">
-<script src="https://cdn.bootcss.com/gitalk/1.4.1/gitalk.min.js"></script>
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
 
-<div id="gitalk-container"></div>
-<script type="text/javascript">
-    var pathArr = location.pathname.split("/");
-    var pathId = pathArr[pathArr.length-1];
-    var gitalk = new Gitalk({
-        // Gitalk配置
-        clientID: "5b33351fb9408e1cb9cf",
-        clientSecret: "37d5e35d269f50d5cdb82192b2e92b025cf773e7",
-        repo: "Syngnath.github.io",
-        owner: "Syngnath",
-        admin: "[Syngnath]",
-        id: "" || pathId || location.pathname,
-        distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-</script>
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'QnGRO2ioAdWQswEJ8myGMirO-gzGzoHsz',
+            appKey: 'wavgIyBn5F06KEINKYjfsOo6',
+            placeholder: '说点什么吧',
+            notify: true,
+            verify: true,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '15',
+            path: window.location.pathname,
+            lang: ''.toLowerCase()
+        })
+    </script>
 
 
     </div>
