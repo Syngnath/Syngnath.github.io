@@ -45,8 +45,8 @@ Job NUM  | $TRAVIS_JOB_NUMBER |
 EOF
 
   git init
-  git config user.name "shenliyang"
-  git config user.email ""
+  git config user.name ${U_NAME}
+  git config user.email ${U_EMAIL}
   git add .
   git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages
