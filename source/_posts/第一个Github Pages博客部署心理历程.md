@@ -52,60 +52,8 @@ hexo d
 解决：npm版本太低，去下载新版本的nodejs，一些博客推荐的版本都是上古版本
 
 坑3: travis cl 部署失败，查看日志发现 rakefiles not found
-解决：不要用主题包自带的`.travis.yml`文件，它会跳转到`_travis.sh`里面执行一大堆没什么卵用又会不知道哪里出错的命令，去网上一些博客网址抄一个顺眼的下来就行。接下来下面提供一个顺眼的自用的，理论上只有这一个文件就够了
-```
-language: node_js
-node_js: stable
+解决：不要用主题包自带的`.travis.yml`文件，它会跳转到`_travis.sh`里面执行一大堆命令，注意要一句一句看把不需要的去掉，如果出错仔细阅读日记，尝试把出错导致语句去掉。
 
-sudo: false
-
-#cache
-cache:
-  directories:
-    - "node_modules"
-
-notifications:
-  # 邮件发送部署结果通知
-  email:
-    recipients:
-      - XXX@163.com
-    on_success: never
-    on_failure: always
-
-# S: Build Lifecycle
-install:
-  - npm install
-#  - gem install travis
-#  - travis login --pro --github-token ${GH_TOKEN}
-
-before_script:
-  - export TZ='Asia/Shanghai'
-  - npm install -g gulp
-  - chmod +x _travis.sh
-
-script:
-  - hexo clean && hexo g
-  
-after_script:
-  - cd ./public
-  - git init
-  - git config user.name "用户名"
-  - git config user.email "邮箱"
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-
-after_success:
- # - LAST_BUILD_NUMBER=68
- # - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
-
-branches:
-  only:
-    - hexo
-env:
- global:
-   - GH_REF: github.com/用户名/用户名.github.io.git
-```
 **注意GH_TOKEN，和GH_REF是你要在travis.cl网站里面对应工程setting里添加环境变量，它读取时就会自动替换，这样好处是防止泄露重要资料**
 
 好了，希望你接下来和我一样搭建出好的Blog，下面提供一些参考博客
