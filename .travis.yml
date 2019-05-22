@@ -51,4 +51,4 @@ branches:
     - hexo
 env:
  global:
-   - GH_REF: github.com/Syngnath/Syngnath.github.io.git
+   #- GH_REF: github.com/Syngnath/Syngnath.github.io.git
