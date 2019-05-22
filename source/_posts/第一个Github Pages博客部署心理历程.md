@@ -30,7 +30,7 @@ gitlab用于git托管，并且支持私有仓库，让你的隐私不被别人�
 
 好了，现在资料本地一份，Onedrive云盘一份，gitlab一份，三重备份，还能随时回溯，nothing is better!
 
-## B工作区方案: VScode + hexo + travis cl
+## B工作区方案: VScode + hexo + travis cl + Snippet
 简单说下，创建一个git工作区后，安装hexo，它会生成静态网页，这样我们可以本地预览或者推送到GitHUb或者码云等Git托管网站，它们有个Github pages的功能可以显示出该静态网页，从而实现Blog的功能。但是有人可能会问**travis cl**是个什么东西？
 
 你想一下，每次本地码完字后，都要去工作区
@@ -44,6 +44,8 @@ hexo d
 
 好了你现在要做的就是在vscode里面写好文章，确定没问题后就在vscode里push上去，ok！搞定
 
+接下来介绍一下**Snippet**这个主题，这个主题是我见过最好的hexo主题框架，有钉钉通知推送，评论区功能也集成了N个插件，基本上你想要的它都有了，具体的不再评论，对应的使用手册很详细。
+
 ## 踩坑
 坑1：hexo部署后的文件覆盖掉原来在master上的源文件
 解决：把源文件整个文件夹Push到master后，创建分支hexo,然后把hexo设为默认分支，然后本地部署时，它自动推送的依然是master分支,这这样就不会影响到hexo的源文件
@@ -54,11 +56,15 @@ hexo d
 坑3: travis cl 部署失败，查看日志发现 rakefiles not found
 解决：不要用主题包自带的`.travis.yml`文件，它会跳转到`_travis.sh`里面执行一大堆命令，注意要一句一句看把不需要的去掉，如果出错仔细阅读日记，尝试把出错导致语句去掉。
 
-**注意GH_TOKEN，和GH_REF是你要在travis.cl网站里面对应工程setting里添加环境变量，它读取时就会自动替换，这样好处是防止泄露重要资料**
+**注意GH_TOKEN，和GH_REF等${}里面装着一个字符串是你要在travis.cl网站里面对应工程setting里添加环境变量，它读取时就会自动替换，这样好处是防止泄露重要资料**
+**但是有时候在travis加了环境变量也会失效还是要把字符串粘贴到文本中，这个具体对应功能不行再尝试**
 
 好了，希望你接下来和我一样搭建出好的Blog，下面提供一些参考博客
 [最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析](https://www.simon96.online/2018/10/12/hexo-tutorial/)
 [Travis Cl参考](https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/)
+
+# 结论
+现在工具流是在VsCode里码好字，使用VsCode管理两个Git工作区，然后挑选几篇笔记整理成文章，复制到对应的文件夹，推送。Done！看着窗外的月光1分钟后，Travis CL会自动帮我构建环境生成静态网页，并且通过钉钉(邮件)通知我构建成功。GitHub博客就可以访问到最新的文章区，如果有问题，也可以在下面的评论区进行评论。多么美好的工作流。好了，今天的博客介绍就到这里!
 
 # 博客内容
 会记录一些关于C家族笔记和Unity相关东西，AI算法等，主要和游戏相关。
