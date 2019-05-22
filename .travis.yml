@@ -20,7 +20,7 @@ notifications:
   email:
     recipients:
       - mumushum@163.com
-    on_success: never
+    on_success: always
     on_failure: always
 
 # S: Build Lifecycle

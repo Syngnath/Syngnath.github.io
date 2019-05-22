@@ -6,7 +6,7 @@ tags:
   - Travis Cl
   - Hexo
   - VsCode
-comments: false
+comments: true
 date: 2019-05-22 18:26:00
 img: './PostImg/welcome.jpg'
 ---
