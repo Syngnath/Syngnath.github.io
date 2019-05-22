@@ -168,14 +168,14 @@ livere:
 
 ## Gitalk评论
 gitalk:
-   enable: false
-   clientID: 
-   clientSecret: 
-   repo: 
-   owner: 
-   admin: 
-   perPage:
-   id:
+   enable: true
+   clientID: 5b33351fb9408e1cb9cf
+   clientSecret: 37d5e35d269f50d5cdb82192b2e92b025cf773e7
+   repo: "Syngnath.github.io"
+   owner: Syngnath
+   admin: Syngnath
+   perPage: 15
+   id: ""
 
 ### Disqus评论
 disqus:
@@ -200,13 +200,13 @@ uyan:
 
 ## 网站访客统计
 visit_counter:
-   site: false
-   page: false
+   site: true
+   page: true
 
 ## 网站访问统计分析
 
 ### 网盟CNZZ统计
-cnzz_analytics: 
+cnzz_analytics: 1277634092
 
 ### 百度统计
 baidu_analytics:
