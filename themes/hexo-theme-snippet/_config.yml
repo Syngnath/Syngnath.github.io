@@ -169,11 +169,11 @@ livere:
 ## Gitalk评论
 gitalk:
    enable: true
-   clientID: '5b33351fb9408e1cb9cf'
-   clientSecret: '37d5e35d269f50d5cdb82192b2e92b025cf773e7'
-   repo: 'Syngnath.github.io'
-   owner: 'Syngnath'
-   admin: 'Syngnath'
+   clientID: "5b33351fb9408e1cb9cf"
+   clientSecret: "37d5e35d269f50d5cdb82192b2e92b025cf773e7"
+   repo: "Syngnath.github.io"
+   owner: Syngnath
+   admin: Syngnath
    perPage: 15
    id: ""
 
