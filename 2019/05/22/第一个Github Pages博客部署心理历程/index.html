@@ -209,6 +209,31 @@
 </div>
 
 
+    <div id="comments">
+        
+	<link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.4.1/gitalk.min.css">
+<script src="https://cdn.bootcss.com/gitalk/1.4.1/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+    var pathArr = location.pathname.split("/");
+    var pathId = pathArr[pathArr.length-1];
+    var gitalk = new Gitalk({
+        // Gitalk配置
+        clientID: "5b33351fb9408e1cb9cf",
+        clientSecret: "37d5e35d269f50d5cdb82192b2e92b025cf773e7",
+        repo: "Syngnath.github.io",
+        owner: "Syngnath",
+        admin: "[Syngnath]",
+        id: "" || pathId || location.pathname,
+        distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+</script>
+
+
+    </div>
+
 
 
 
