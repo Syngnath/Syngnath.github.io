@@ -29,15 +29,10 @@ before_script:
 
 script:
   - hexo clean && hexo g
+  - gulp
   
 after_script:
-  - cd ./public
-  - git init
-  - git config user.name "Syngnath"
-  - git config user.email "mumushum@163"
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+  - ./_travis.sh
 
 after_success:
  # - LAST_BUILD_NUMBER=68
