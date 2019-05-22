@@ -44,7 +44,6 @@ after_success:
 
 after_script:
   - ./_travis.sh
-
 # E: Build LifeCycle
 
 branches:
@@ -53,5 +52,3 @@ branches:
 env:
  global:
    - GH_REF: github.com/Syngnath/Syngnath.github.io.git
-  
-
