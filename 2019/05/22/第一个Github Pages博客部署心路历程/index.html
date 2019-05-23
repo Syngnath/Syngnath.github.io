@@ -191,7 +191,7 @@
 <p>坑2：npm install 没反应，啥提示都没，导致下一步无法进行下去<br>解决：npm版本太低，去下载新版本的nodejs，一些博客推荐的版本都是上古版本</p>
 <p>坑3: travis cl 部署失败，查看日志发现 rakefiles not found<br>解决：不要用主题包自带的<code>.travis.yml</code>文件，它会跳转到<code>_travis.sh</code>里面执行一大堆命令，注意要一句一句看把不需要的去掉，如果出错仔细阅读日记，尝试把出错导致语句去掉。</p>
 <p><strong>注意GH_TOKEN，和GH_REF等${}里面装着一个字符串是你要在travis.cl网站里面对应工程setting里添加环境变量，它读取时就会自动替换，这样好处是防止泄露重要资料</strong><br><strong>但是有时候在travis加了环境变量也会失效还是要把字符串粘贴到文本中，这个具体对应功能不行再尝试</strong></p>
-<p>好了，希望你接下来和我一样搭建出好的Blog，下面提供一些参考博客<br><a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" target="_blank" rel="noopener">最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析</a><br><a href="https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/" target="_blank" rel="noopener">Travis Cl参考</a></p>
+<p>好了，希望你接下来和我一样搭建出好的Blog，下面提供一些参考博客<br><a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" target="_blank" rel="noopener">最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析</a><br><a href="https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/" target="_blank" rel="noopener">Travis Cl参考</a><br><a href="https://deserts.io/diy-a-comment-system/" target="_blank" rel="noopener">valine评论部署</a></p>
 <h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>现在工具流是在VsCode里码好字，使用VsCode管理两个Git工作区，然后挑选几篇笔记整理成文章，复制到对应的文件夹，推送。Done！看着窗外的月光1分钟后，Travis CL会自动帮我构建环境生成静态网页，并且通过钉钉(邮件)通知我构建成功。GitHub博客就可以访问到最新的文章区，如果有问题，也可以在下面的评论区进行评论。多么美好的工作流。好了，今天的博客介绍就到这里!</p>
 <h1 id="博客内容"><a href="#博客内容" class="headerlink" title="博客内容"></a>博客内容</h1><p>会记录一些关于C家族笔记和Unity相关东西，AI算法等，主要和游戏相关。<br><code>Study for developing our country</code></p>
 
@@ -242,25 +242,27 @@
 
     <div id="comments">
         
-	<link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.4.1/gitalk.min.css">
-<script src="https://cdn.bootcss.com/gitalk/1.4.1/gitalk.min.js"></script>
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
 
-<div id="gitalk-container"></div>
-<script type="text/javascript">
-    var pathArr = location.pathname.split("/");
-    var pathId = pathArr[pathArr.length-1];
-    var gitalk = new Gitalk({
-        // Gitalk配置
-        clientID: "5b33351fb9408e1cb9cf",
-        clientSecret: "37d5e35d269f50d5cdb82192b2e92b025cf773e7",
-        repo: "Syngnath.github.io",
-        owner: "Syngnath",
-        admin: "[Syngnath]",
-        id: "" || pathId || location.pathname,
-        distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-</script>
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'QnGRO2ioAdWQswEJ8myGMirO-gzGzoHsz',
+            appKey: 'wavgIyBn5F06KEINKYjfsOo6',
+            placeholder: '说点什么吧',
+            notify: true,
+            verify: true,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '15',
+            path: window.location.pathname,
+            lang: ''.toLowerCase()
+        })
+    </script>
 
 
     </div>
