@@ -7,8 +7,9 @@ tags:
   - Hexo
   - VsCode
 comments: true
+img: 'https://synp.oss-cn-hongkong.aliyuncs.com/welcome.jpg'
+abbrlink: 34807
 date: 2019-05-22 18:26:00
-img: https://synp.oss-cn-hongkong.aliyuncs.com/welcome.jpg
 ---
 
 # 简介
