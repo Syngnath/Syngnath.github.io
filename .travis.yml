@@ -32,6 +32,7 @@ install:
 before_script:
   - export TZ='Asia/Shanghai'
   - npm install -g gulp
+  - npm install notify-send
   - chmod +x _travis.sh
 
 script:
