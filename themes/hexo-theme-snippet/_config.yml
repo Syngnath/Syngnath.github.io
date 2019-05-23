@@ -8,6 +8,9 @@ menu:
 - page: Home
   url: /
   icon:
+- page: 随笔
+  url: /categories/随笔/
+  icon:
 - page: 时间轴
   url: /archives/
   icon:
