@@ -33,7 +33,7 @@
         .pipe(less())
         .pipe(rename({basename: "style"}))
         .pipe(gulp.dest(paths.source + 'css'))
-        .pipe(gulp.dest('less compile complete'));
+        .pipe(notify({message: 'less compile complete'}));
     });
 
     // 校验JS语法和风格
@@ -42,7 +42,7 @@
         .pipe(jshint())
         .pipe(jshint.reporter(stylish))
         .pipe(gulp.dest(paths.source + 'js/'))
-        .pipe(gulp.dest('js compile complete'));
+        .pipe(notify({message: 'js compile complete'}));
     });
 
     // 监听任务-主题开发模式
