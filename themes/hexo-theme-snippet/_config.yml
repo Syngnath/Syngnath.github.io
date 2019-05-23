@@ -148,7 +148,7 @@ reward:
 
 ## Valine评论
 valine:
-   enable: false
+   enable: true
    appId: QnGRO2ioAdWQswEJ8myGMirO-gzGzoHsz
    appKey: wavgIyBn5F06KEINKYjfsOo6
    placeholder: 说点什么吧
@@ -171,7 +171,7 @@ livere:
 
 ## Gitalk评论
 gitalk:
-   enable: true
+   enable: false
    clientID: '5b33351fb9408e1cb9cf'
    clientSecret: '37d5e35d269f50d5cdb82192b2e92b025cf773e7'
    repo:  "Syngnath.github.io"

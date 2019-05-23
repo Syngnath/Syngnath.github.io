@@ -70,6 +70,7 @@ hexo d
 好了，希望你接下来和我一样搭建出好的Blog，下面提供一些参考博客
 [最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析](https://www.simon96.online/2018/10/12/hexo-tutorial/)
 [Travis Cl参考](https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/)
+[valine评论部署](https://deserts.io/diy-a-comment-system/)
 
 
 
