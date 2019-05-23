@@ -8,7 +8,7 @@ tags:
   - VsCode
 comments: true
 date: 2019-05-22 18:26:00
-img: './PostImg/welcome.jpg'
+img: https://synp.oss-cn-hongkong.aliyuncs.com/welcome.jpg
 ---
 
 # 简介
