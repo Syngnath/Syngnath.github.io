@@ -32,14 +32,14 @@ install:
 before_script:
   - export TZ='Asia/Shanghai'
   - npm install -g gulp
-  - npm install notify-send
+  - npm install notify
   - chmod +x _travis.sh
 
 script:
   - hexo clean && hexo g
   # 复制谷歌搜索凭证到该目录
   - cp ./License/googleb47a830154cebabf.html ./public/
-  - gulp default
+  - gulp
   
 after_success:
  # - LAST_BUILD_NUMBER=68
