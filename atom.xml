@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://syngnath.github.io/"/>
-  <updated>2019-05-23T13:58:07.794Z</updated>
+  <updated>2019-05-23T14:36:10.411Z</updated>
   <id>https://syngnath.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://syngnath.github.io/2019/05/23/%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/"/>
     <id>https://syngnath.github.io/2019/05/23/关于如何学习/</id>
     <published>2019-05-23T05:19:00.000Z</published>
-    <updated>2019-05-23T13:58:07.794Z</updated>
+    <updated>2019-05-23T14:36:10.411Z</updated>
     
     <content type="html"><![CDATA[<h1 id="万事入门难"><a href="#万事入门难" class="headerlink" title="万事入门难"></a>万事入门难</h1><p>现在社会变化很快，时时刻刻都有新的东西产生，掌握适当的技巧来学习和熟悉一个新的东西是非常有必要的。当人接触一个新东西的时候，往往难以下手是很正常的，因为一无所知。我这里说下个人的经验：</p><p><strong>1.寻找合适的网上教学视频进行观看。</strong><br>网上的视频一般都是成体系的，能够带领初学者很好地接触入门。缺点是比较耗费时间</p><p><br></p><p><strong>2.直接阅读产品的源教学文档</strong><br>这种方法比较适合已经知道同类产品如何使用，然后只是了解下同样的操作方式不同的操作名称而已。</p><p><br></p><p><strong>3.阅读Blog</strong><br>google搜索对应的Blog介绍文章，一般写出文章的都是已经比较熟悉该项目的人，可以带你迅速避坑，记住关注下博客发表的时间，太老旧的要小心一点。</p><p><br></p><p><strong>4.看书</strong><br>最后还是最推荐这个方法，想最全面学习一个东西，还是得沉下心慢慢看书，看到不懂就上网查查，最老旧的往往是最实用的。</p><p><br><br><strong>知识，需要时间沉淀</strong></p>]]></content>
     
@@ -44,7 +44,7 @@
     <link href="https://syngnath.github.io/2019/05/22/%E7%AC%AC%E4%B8%80%E4%B8%AAGithub%20Pages%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/"/>
     <id>https://syngnath.github.io/2019/05/22/第一个Github Pages博客部署心路历程/</id>
     <published>2019-05-22T10:26:00.000Z</published>
-    <updated>2019-05-23T13:58:07.794Z</updated>
+    <updated>2019-05-23T14:36:10.411Z</updated>
     
     <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>欢迎来到我的github博客，这个博客会被我用于记录一些学习笔记，将来可能会发布一些总结性的东西。</p><h1 id="博客简历心路历程"><a href="#博客简历心路历程" class="headerlink" title="博客简历心路历程"></a>博客简历心路历程</h1><p>这个博客弄了我两天，终于弄完了，这是第一个笔记，主要是不太熟悉一些命令操作踩坑了，并且实现自动化部署花了些时间。</p><p>找了好多主题不太满意，最后决定用这个主题是因为说明文档比较详细，但是直接copy进去是用不了的…所以又看了好多文章才实现。</p><p>现在我在本地有两个工作区，第一个是自己随笔写的自己看的，比较多东西，第二个是发布出去到博客上的上的，是需要花时间整理发布的。为了之后好说明，将前者设为<strong>A工作区</strong>，后者设为<strong>B工作区</strong></p><h2 id="A工作区方案-Onedrive-VSCode-gitlab"><a href="#A工作区方案-Onedrive-VSCode-gitlab" class="headerlink" title="A工作区方案:Onedrive + VSCode + gitlab"></a>A工作区方案:Onedrive + VSCode + gitlab</h2><p>Onedrive大家应该有用过，就是一个非常方便的同步工具，设置好文件夹好东西扔进去就能自动同步，而且不会怕锁定文件一切自动化不用理</p><p>VsCode主要是用于码字和git推送，需要装一些插件才能更好支持git和markdown，这里不再阐述</p><p>gitlab用于git托管，并且支持私有仓库，让你的隐私不被别人看到，国内的码云也可以</p><p>好了，现在资料本地一份，Onedrive云盘一份，gitlab一份，三重备份，还能随时回溯，nothing is better!</p><h2 id="B工作区方案-VScode-hexo-travis-cl-Snippet"><a href="#B工作区方案-VScode-hexo-travis-cl-Snippet" class="headerlink" title="B工作区方案: VScode + hexo + travis cl + Snippet"></a>B工作区方案: VScode + hexo + travis cl + Snippet</h2><p>简单说下，创建一个git工作区后，安装hexo，它会生成静态网页，这样我们可以本地预览或者推送到GitHUb或者码云等Git托管网站，它们有个Github pages的功能可以显示出该静态网页，从而实现Blog的功能。但是有人可能会问<strong>travis cl</strong>是个什么东西？</p><p>你想一下，每次本地码完字后，都要去工作区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p><p>是不是感觉太麻烦，我只想安安静静写个文章而已。<br>所以travis cl可以帮你解决这个问题，<br>它会监控你的分支，当你push东西上去后，会自动帮你deploy一个静态网页，这样你就不用每次都输入命令了。</p><p>好了你现在要做的就是在vscode里面写好文章，确定没问题后就在vscode里push上去，ok！搞定</p><p>接下来介绍一下<strong>Snippet</strong>这个主题，这个主题是我见过最好的hexo主题框架，有钉钉通知推送，评论区功能也集成了N个插件，基本上你想要的它都有了，具体的不再评论，对应的使用手册很详细。</p><h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><p>坑1：hexo部署后的文件覆盖掉原来在master上的源文件<br>解决：把源文件整个文件夹Push到master后，创建分支hexo,然后把hexo设为默认分支，然后本地部署时，它自动推送的依然是master分支,这这样就不会影响到hexo的源文件</p><p>坑2：npm install 没反应，啥提示都没，导致下一步无法进行下去<br>解决：npm版本太低，去下载新版本的nodejs，一些博客推荐的版本都是上古版本</p><p>坑3: travis cl 部署失败，查看日志发现 rakefiles not found<br>解决：不要用主题包自带的<code>.travis.yml</code>文件，它会跳转到<code>_travis.sh</code>里面执行一大堆命令，注意要一句一句看把不需要的去掉，如果出错仔细阅读日记，尝试把出错导致语句去掉。</p><p><strong>注意GH_TOKEN，和GH_REF等${}里面装着一个字符串是你要在travis.cl网站里面对应工程setting里添加环境变量，它读取时就会自动替换，这样好处是防止泄露重要资料</strong><br><strong>但是有时候在travis加了环境变量也会失效还是要把字符串粘贴到文本中，这个具体对应功能不行再尝试</strong></p><p>好了，希望你接下来和我一样搭建出好的Blog，下面提供一些参考博客<br><a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" target="_blank" rel="noopener">最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析</a><br><a href="https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/" target="_blank" rel="noopener">Travis Cl参考</a><br><a href="https://deserts.io/diy-a-comment-system/" target="_blank" rel="noopener">valine评论部署</a></p><h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>现在工具流是在VsCode里码好字，使用VsCode管理两个Git工作区，然后挑选几篇笔记整理成文章，复制到对应的文件夹，推送。Done！看着窗外的月光1分钟后，Travis CL会自动帮我构建环境生成静态网页，并且通过钉钉(邮件)通知我构建成功。GitHub博客就可以访问到最新的文章区，如果有问题，也可以在下面的评论区进行评论。多么美好的工作流。好了，今天的博客介绍就到这里!</p><h1 id="博客内容"><a href="#博客内容" class="headerlink" title="博客内容"></a>博客内容</h1><p>会记录一些关于C家族笔记和Unity相关东西，AI算法等，主要和游戏相关。<br><code>Study for developing our country</code></p>]]></content>
     
