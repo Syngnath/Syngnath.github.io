@@ -1,7 +1,7 @@
 ---
-title: 第一个Github Pages博客部署心理历程
+title: 第一个Github Pages hexo博客部署心路历程
 categories:
-  - 博客
+  - 随笔
 tags:
   - Travis Cl
   - Hexo
