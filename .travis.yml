@@ -31,6 +31,7 @@ install:
 
 before_script:
   - export TZ='Asia/Shanghai'
+  - npm install --save-dev gulp-notify@3.0.0
   - npm install -g gulp
   - chmod +x _travis.sh
 
@@ -38,6 +39,7 @@ script:
   - hexo clean && hexo g
   # 复制谷歌搜索凭证到该目录
   - cp ./License/googleb47a830154cebabf.html ./public/
+  # excute gulp
   - gulp
   
 after_success:
