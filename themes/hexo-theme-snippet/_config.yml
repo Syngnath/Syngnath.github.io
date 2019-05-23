@@ -35,7 +35,6 @@ widgets:
   - social
   - friends
 
-
 ## 搜索
 jsonContent:
   searchLocal: true 
@@ -50,7 +49,8 @@ jsonContent:
 ## 网站公告设置
 notification: |-
             <p>
-                个人链接：<a href="https://github.com/Syngnath" title="fork me" target="_blank">GitHub主页</a> <br/>
+                欢迎来到<a href="https://github.com/Syngnath" title="fork me" target="_blank">Syngnath</a>的博客，我将乐于为您分享我的一切。<br/>
+                如果觉得有疑问的，欢迎在评论区进行交流。<br/>
             </p>
 
 ## 社交设置
@@ -95,7 +95,7 @@ links:
 # 主题自定义个性化配置
 
 ## 网站宣传语
-branding: 'Syngnath 的技术沙龙'
+branding: '攀登者,勇闯代码之巅'
 
 ## 设置banner背景图片
 banner:
