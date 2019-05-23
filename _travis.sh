@@ -47,6 +47,9 @@ EOF
   git init
   git config user.name "Syngnath"	
   git config user.email mumushum@163.com
+  # License 谷歌验证
+  cp ./License/googleb47a830154cebabf.html ./public/
+  # 提交分支
   git add .
   git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages

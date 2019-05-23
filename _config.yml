@@ -5,7 +5,7 @@
 # Site
 title: Syngnath
 subtitle:
-description:
+description: 'Person Blog'
 keywords:
 author: Syngnath
 language:
@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://syngnath.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -74,6 +74,12 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-snippet
+
+##自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
