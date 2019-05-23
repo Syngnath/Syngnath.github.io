@@ -36,6 +36,8 @@ before_script:
 
 script:
   - hexo clean && hexo g
+  # 复制谷歌搜索凭证到该目录
+  - cp ./License/googleb47a830154cebabf.html ./public/
   #- gulp
   
 after_script:

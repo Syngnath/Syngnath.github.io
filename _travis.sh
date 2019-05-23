@@ -43,20 +43,22 @@ cat <<EOF >> README.md
 Job ID   | $TRAVIS_JOB_ID |
 Job NUM  | $TRAVIS_JOB_NUMBER |
 EOF
-
+  
+  # git init
   git init
   git config user.name "Syngnath"	
   git config user.email mumushum@163.com
-  # License 谷歌验证
-  cp ./License/googleb47a830154cebabf.html ./public/
+ 
   # 提交分支
   git add .
   git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  
   # Github Pages
   git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
   
   # Create Tag
   git tag v1.2.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  
   # Github Pages
   git push --quiet "https://${GH_TOKEN}@${GH_REF}" master:master --tags
 }
