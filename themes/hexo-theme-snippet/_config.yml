@@ -148,7 +148,7 @@ reward:
 
 ## Valine评论
 valine:
-   enable: true
+   enable: false
    appId: QnGRO2ioAdWQswEJ8myGMirO-gzGzoHsz
    appKey: wavgIyBn5F06KEINKYjfsOo6
    placeholder: 说点什么吧
@@ -166,8 +166,8 @@ changyan:
 
 ### 来必力
 livere:
-  enable: false
-  livere_uid: MTAyMC8zMzA1MS85NjEz
+  enable: true
+  livere_uid: MTAyMC80NDM5Ni8yMDkyOA
 
 ## Gitalk评论
 gitalk:
