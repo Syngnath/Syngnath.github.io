@@ -13,7 +13,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://syngnath.github.io/
+# 这里用于谷歌搜索和百度搜索生成的sitemap
+url: http://syngnath.top/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
