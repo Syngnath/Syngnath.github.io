@@ -86,6 +86,9 @@ baidusitemap:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: https://GH_TOKEN@github.com/Syngnath/Syngnath.github.io.git
+  branch: master
+- type: git
+  repo: https://CODING_TOKEN@git.dev.tencent.com/Syngnath/Syngnath.git
   branch: master
