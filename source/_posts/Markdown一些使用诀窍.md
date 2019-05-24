@@ -44,7 +44,6 @@ MarkdownAllinOne -- 快捷键
 yeshujun|2-class|1502
 moss|3-class|1504
 
-
 姓名|班别|学号
 --|--|--
 yeshujun|2-class|1502
