@@ -1,5 +1,5 @@
 ---
-title: 第一个Github Pages hexo博客部署心路历程
+title: Hexo架构的Github Pages博客部署心路历程
 categories:
   - 随笔
 tags:
