@@ -4,6 +4,7 @@ categories:
   - 随笔
 comments: true
 img: 'https://synp.oss-cn-hongkong.aliyuncs.com/markdown.png'
+abbrlink: 30388
 date: 2019-05-25 12:19:00
 ---
 
