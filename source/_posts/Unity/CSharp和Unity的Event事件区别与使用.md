@@ -15,16 +15,20 @@ date: 2019-05-26 12:45:00
 
 # Delegate
 ## 委托的基本声明和基本使用
+先看下委托的定义：
 *C# 中的委托（Delegate）类似于 C 或 C++ 中函数的指针。委托（Delegate） 是存有对某个方法的引用的一种引用类型变量。引用可在运行时被改变。*
+
 简单来说，**委托就是存储方法容器**。C# 基于这个基础做了一定优化封装。下面介绍下delegate基本使用:
 我想声明一个叫BroadCast的委托，将来用于存放方法，它接收string参数，并且返回值为void。而声明一个委托相当于声明一个新类，所有可以声明类的地方都可以声明委托。
 `public delegate void BroadCast(string msg);`
 这样它就是个可以存放和它标签一样，即同样是接收string参数，返回void的方法。
+
 接着我们使用它去定义一些事件容器，如
 ```
 public BroadCast broadCastA;
 public BroadCast broadCastB;
 ```
+
 好了，接着在下面添加两个方法，一个叫BroadCastCore，用于调用委托里存放的东西，另外一个叫Func1的方法，Func1存放到broadCastA内，和broadCastA具备同样的标签，只要对broadCastA执行Invoke方法并且传递对应参数，那么里面存放的对应方法就会被调用并且接受到传递过来的参数。
 ```
 void BroadCastCore(){
@@ -45,6 +49,7 @@ void Func1(string receiveMsg){
 broadCastA += Func1;
 broadCastA += Func2;
 broadCastA += Func3;
+
 使用 `-=` 关键词可以卸掉原来注册方法
 broadCastA -= Func1;
 broadCastA -= Func2;
@@ -162,6 +167,7 @@ DataBundle可以封装一个<string, object>用于存放一些事件属性或者
 大概使用方法就是：
 **枚举类EventType**：
 存放事件，里面的事件对应的编号要明确写出，不要自动迭代
+
 **管理类EventMng**：
 EventType 定义的变量 eventMain
 提供一个事件的监听方法
@@ -171,6 +177,7 @@ EventType 定义的变量 eventMain
 `Trigger(EventType type){}`
 给外部触发
 Update：监控eventMain，如果eventMain不为null，则在**下一帧**清除
+
 **兴趣类Person**:
 这时候假设有个类Person对EventType里某个事件感兴趣
 这时候只要在update里
