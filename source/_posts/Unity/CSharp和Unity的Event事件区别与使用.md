@@ -1,13 +1,15 @@
 ---
-title: Unity研究：C#和Unity的Event事件区别与使用
+title: 'Unity研究：c#和Unity的Event事件区别与使用'
 categories:
   - Unity
 tags:
   - Unity
 comments: true
 img: 'https://synp.oss-cn-hongkong.aliyuncs.com/UnityLogo.png'
+abbrlink: 10821
 date: 2019-05-26 12:45:00
 ---
+
 # 前言
 现在设计游戏趋向于事件驱动，即当一个事件发生时，如主角捡到一个血包，发射一颗子弹，或者游戏里所有的物体需要进入第二阶段的状态，事件被广播给游戏中的相关对象，这样它们可以恰当做出反应，事件一般是以**数据包**形式送出，数据包包含事件的信息，如发送者，或者时间戳等，根据实际情况决定。而这些的一切都要围绕**Event**作为核心，不过在说明Event之前先了解它的前身--**delegate**。
 
@@ -178,4 +180,3 @@ if(EventMng.Instance.Observe()){
 就能监听对应事件执行相应代码
 
 **可以看到，主动监听模式使用起来比较简单，并且不需要事件的注册，只需要一个存放事件一帧的容器即可，简单，有效**
-
