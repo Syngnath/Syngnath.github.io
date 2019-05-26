@@ -97,6 +97,7 @@ public InformEvent
 
 ## 事件注册
 首先F12看UnityEvent写了什么
+```
 namespace UnityEngine.Events
 {
     public abstract class UnityEvent<T0> : UnityEventBase
@@ -110,6 +111,7 @@ namespace UnityEngine.Events
         protected override MethodInfo FindMethod_Impl(string name, object targetObj);
     }
 }
+```
 
 需要传入UnityAction声明的参数，尝试声明一个UnityAction发现它利用多态性封装了0-4个泛型参数的Action无返回值委托
 ```
@@ -118,6 +120,7 @@ public delegate void UnityAction<T0>(T0 arg0);
 public delegate void UnityAction<T0, T1>(T0 arg0, T1 arg1);
 ...
 ```
+
 那么明白本质后用起来就很简单了
 - Lambada
 informEvent.AddListener((msg)=>{print("Get Msg:" + msg)});
