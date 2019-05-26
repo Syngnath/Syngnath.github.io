@@ -1,9 +1,10 @@
 ---
-title: 'Unity研究：c#和Unity的Event事件区别与使用'
+title: 'Unity研究：C#和Unity的Event事件区别与使用'
 categories:
   - Unity
 tags:
   - Unity
+  - C#
 comments: true
 img: 'https://synp.oss-cn-hongkong.aliyuncs.com/UnityLogo.png'
 abbrlink: 10821
@@ -166,12 +167,11 @@ public class Example : MonoBehaviour
 DataBundle可以封装一个<string, object>用于存放一些事件属性或者其他任意的东西，从而使事件本身带有一些数据或者一些状态，一些属性，更加多样化。
 
 - 主动监听模式
-核心思想是**谁感兴趣，谁主动监听**，一般使用观察者模式是在比较具体的模块上使用，根据实际情况增添相应的接口。
-大概使用方法就是：
-**枚举类EventType**：
+核心思想是**谁感兴趣，谁主动监听**，一般使用观察者模式是在比较具体的模块上使用，根据实际情况增添相应的接口。下面举个例子：
+  - **枚举类EventType**：
 存放事件，里面的事件对应的编号要明确写出，不要自动迭代
 
-**管理类EventMng**：
+  - **管理类EventMng**：
 EventType 定义的变量 eventMain
 提供一个事件的监听方法
 `Observe(EventType type){return eventMain==type;}`
@@ -181,7 +181,7 @@ EventType 定义的变量 eventMain
 给外部触发
 Update：监控eventMain，如果eventMain不为null，则在**下一帧**清除
 
-**兴趣类Person**:
+  - **兴趣类Person**:
 这时候假设有个类Person对EventType里某个事件感兴趣
 这时候只要在update里
 if(EventMng.Instance.Observe()){
