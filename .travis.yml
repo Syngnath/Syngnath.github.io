@@ -31,7 +31,7 @@ install:
 
 before_script:
   - export TZ='Asia/Shanghai'
-  - npm install --save-dev gulp-notify@3.0.0
+  #- npm install --save-dev gulp-notify@3.0.0
   - npm install -g gulp
   - chmod +x _travis.sh
 
