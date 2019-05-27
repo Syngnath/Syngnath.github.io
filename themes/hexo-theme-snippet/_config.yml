@@ -24,7 +24,7 @@ rss: /atom.xml
 ## Carousel
 carousel:
   img: './img/brain.png'
-  url: 'javascript:'
+  url: 'https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=xs0pypd2'
 
 # 各个小工具的设置
 
@@ -37,6 +37,7 @@ widgets:
   - tagcloud
   - social
   - friends
+  - stick
 
 ## 搜索
 jsonContent:
