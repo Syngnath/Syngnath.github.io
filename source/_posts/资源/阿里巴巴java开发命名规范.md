@@ -1,4 +1,3 @@
-[toc]
 ---
 title: 阿里巴巴java开发命名规范
 categories:
@@ -7,6 +6,8 @@ comments: true
 img: https://synp.oss-cn-hongkong.aliyuncs.com/java.png
 date: 2019-05-27 21:26:00
 ---
+**PS:该内容由pdf转的，尚未校对，特意备注一下.**
+<br/>
 # java 开发手册 
 
 # 一、编程规约 
