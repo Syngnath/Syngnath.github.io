@@ -1,3 +1,4 @@
+[toc]
 ---
 title: 阿里巴巴java开发命名规范
 categories:
@@ -249,7 +250,7 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 
 13. 【推荐】使用索引访问用String的split方法得到的数组时，需做最后一个分隔符后有无内容的检查，否则会有抛IndexOutOfBoundsException的风险。
 
-### 说明： 
+说明： 
 
 > String str = \"a,b,c,,\";
 >
@@ -259,9 +260,9 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 >
 > System.out.println(ary.length);
 
-14. 【推荐】当一个类有多个构造方法，或者多个同名方法，这些方法应该按顺序放置在一起，便于阅读。
+1.  【推荐】当一个类有多个构造方法，或者多个同名方法，这些方法应该按顺序放置在一起，便于阅读。
 
-15. 【推荐】 类内方法定义顺序依次是：公有方法或保护方法 \> 私有方法 \> getter/setter 方法。
+2.  【推荐】 类内方法定义顺序依次是：公有方法或保护方法 \> 私有方法 \> getter/setter 方法。
 
 > 说明：公有方法是类的调用者和维护者最关心的方法，首屏展示最好；保护方法虽然只是子类关心，也可能是"模板设计模式"下的核心方法；而私有方法外部一般不需要特别关心，是一个黑盒实现；因为方法信息价值较低，所有Service和DAO的getter/setter方法放在类体最后。
 
@@ -290,18 +291,17 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 ### (五) 集合处理 
 
 1.  【强制】关于hashCode和equals的处理，遵循如下规则： 1） 只要重写equals，就必须重写hashCode。
+    - 因为Set存储的是不重复的对象，依据hashCode和equals进行判断，所以Set存储的对象必须重写这两个方法。
 
-    2.  因为Set存储的是不重复的对象，依据hashCode和equals进行判断，所以Set存储的对象必须重写这两个方法。
-
-    3.  如果自定义对象做为Map的键，那么必须重写hashCode和equals。
+    - 如果自定义对象做为Map的键，那么必须重写hashCode和equals。
 
 > 正例：String重写了hashCode和equals方法，所以我们可以非常愉快地使用String对象作为key来使用。
 
-2.  【强制】 ArrayList的subList结果不可强转成ArrayList，否则会抛出ClassCastException 异常：java.util.RandomAccessSubList cannot be cast to java.util.ArrayList ; 说明：subList 返回的是 ArrayList 的内部类 SubList，并不是 ArrayList ，而是 ArrayList 的一个视图，对于SubList子列表的所有操作最终会反映到原列表上。
+1.  【强制】 ArrayList的subList结果不可强转成ArrayList，否则会抛出ClassCastException 异常：java.util.RandomAccessSubList cannot be cast to java.util.ArrayList ; 说明：subList 返回的是 ArrayList 的内部类 SubList，并不是 ArrayList ，而是 ArrayList 的一个视图，对于SubList子列表的所有操作最终会反映到原列表上。
 
-3.  【强制】 在subList场景中，高度注意对原集合元素个数的修改，会导致子列表的遍历、增加、删除均产生ConcurrentModificationException 异常。
+2.  【强制】 在subList场景中，高度注意对原集合元素个数的修改，会导致子列表的遍历、增加、删除均产生ConcurrentModificationException 异常。
 
-4.  【强制】使用集合转数组的方法，必须使用集合的toArray(T\[\] array)，传入的是类型完全一样的数组，大小就是list.size()。
+3.  【强制】使用集合转数组的方法，必须使用集合的toArray(T\[\] array)，传入的是类型完全一样的数组，大小就是list.size()。
 
 > 反例：直接使用toArray无参方法存在问题，此方法返回值只能是Object\[\]类，若强转其它类型数组将出现ClassCastException错误。正例：
 >
@@ -325,7 +325,7 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 >
 > 7\. 【强制】不要在foreach循环里进行元素的remove/add操作。remove元素请使用Iterator 方式，如果并发操作，需要对Iterator对象加锁。
 
-#### 反例： 
+反例： 
 
 > }
 >
@@ -345,7 +345,7 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 
 2.  【强制】创建线程或线程池时请指定有意义的线程名称，方便出错时回溯。
 
-#### 正例： 
+正例： 
 
 > public class TimerTaskThread extends Thread { public TimerTaskThread(){ super.setName(\"TimerTaskThread\"); \...
 >
@@ -357,7 +357,7 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 
 > "过度切换"的问题。
 
-4.  【强制】线程池不允许使用Executors去创建，而是通过ThreadPoolExecutor的方式，这样的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险。
+1.  【强制】线程池不允许使用Executors去创建，而是通过ThreadPoolExecutor的方式，这样的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险。
 
 > 说明：Executors返回的线程池对象的弊端如下：
 
@@ -417,7 +417,7 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 
 12. 【推荐】通过双重检查锁（double-checked locking）（在并发场景）实现延迟初始化的优化问题隐患(可参考 The \"Double-Checked Locking is Broken\" Declaration),推荐问题解决方案中较为简单一种（适用于JDK5及以上版本），将目标属性声明为 volatile型。
 
-##### 反例： 
+反例： 
 
 > class Foo { private Helper helper = null; public Helper getHelper() { if (helper == null) synchronized(this) { if (helper == null) helper = new Helper();
 >
@@ -427,7 +427,7 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 >
 > // other functions and members\... }
 
-13. 【参考】volatile解决多线程内存不可见问题。对于一写多读，是可以解决变量同步问题，但是如果多写，同样无法解决线程安全问题。如果是count++操作，使用如下类实现：
+1.  【参考】volatile解决多线程内存不可见问题。对于一写多读，是可以解决变量同步问题，但是如果多写，同样无法解决线程安全问题。如果是count++操作，使用如下类实现：
 
 > AtomicInteger count = new AtomicInteger(); count.addAndGet(1); 如果是JDK8，推荐使用LongAdder对象，比AtomicLong性能更好（减少乐观锁的重试次数）。
 
@@ -499,7 +499,7 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 
 10. 【参考】好的命名、代码结构是自解释的，注释力求精简准确、表达到位。避免出现注释的一个极端：过多过滥的注释，代码的逻辑一旦修改，修改注释是相当大的负担。
 
-#### 反例： 
+反例： 
 
 > // put elephant into fridge put(elephant, fridge);
 >
@@ -647,7 +647,7 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 
 > 如果日志级别是warn，上述日志不会打印，但是会执行字符串拼接操作，如果symbol是对象，会执行toString()方法，浪费了系统资源，执行了上述操作，最终日志却没有打印。
 
-### 正例：（条件） 
+正例：（条件） 
 
 > if (logger.isDebugEnabled()) { logger.debug(\"Processing trade with id: \" + id + \" symbol: \" + symbol);
 
@@ -795,7 +795,7 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 
 4.  【强制】使用ISNULL()来判断是否为NULL值。注意：NULL与任何值的直接比较都为NULL。
 
-### 说明： 
+说明： 
 
 1.  NULL\<\>NULL的返回结果是NULL，而不是false。
 
